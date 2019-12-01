@@ -65,4 +65,4 @@ routing dinámico.
 
 ### EIGRP-IPv4.pkt
 	
-https://github.com/brahianf/RIP_NG/blob/master/EIGRP-IPv4.pkt?raw=true
+https://github.com/brahianf/EIGRP/blob/master/EIGRP-IPv4.pkt?raw=true
