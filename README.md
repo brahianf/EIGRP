@@ -52,7 +52,7 @@ La autenticación no cifra las actualizaciones de routing EIGRP.
 
 La topología de la siguiente imagen se configura EIGRP para IPv6.
 
-![alt text](https://github.com/brahianf/EIGRP/blob/master/topologiaRed.PNG)
+![alt text](https://github.com/brahianf/EIGRP/blob/IPv6/topologiaRed.PNG)
 
 ### Tabla de direccionamiento
 
@@ -60,7 +60,7 @@ Los routers en la topología tienen una configuración inicial que incluye las d
 de las interfaces y PCs, además del Router ISP y el server con enrutamiento estatico en Router2. 
 En este momento,se configura routing dinámico EIGRP para IPv6 en R0,R1,R2,R3.
 
-![alt text](https://github.com/brahianf/EIGRP/blob/master/tablaDireccionamiento.PNG)
+![alt text](https://github.com/brahianf/EIGRP/blob/IPv6/tablaDireccionamiento.PNG)
 
 
 ### EIGRP-IPv4.pkt
