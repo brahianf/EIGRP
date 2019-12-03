@@ -42,27 +42,27 @@ parciales que se envvian solo a los routers a que los cambios afecten.
 distribuir el flujo de trafico en las redes.
 
 * Autenticación de la información de routing que se transmite asegura de que los routers 
-solo acepten información de routing de otros routers que se configuraron con la misma contraseña 
-o información de autenticación.
+solo acepten información de routing de otros routers que se configuraron con la misma 
+contraseña o información de autenticación.
 La autenticación no cifra las actualizaciones de routing EIGRP.
 
 ###	Enrutamiento dinámico con EIGRP
 
 ### Topología de red
 
-La topología de la siguiente imagen se configura EIGRP para IPv4.
+La topología de la siguiente imagen se configura EIGRP para IPv6.
 
 ![alt text](https://github.com/brahianf/EIGRP/blob/master/topologiaRed.PNG)
 
 ### Tabla de direccionamiento
 
-Los routers en la topología tienen una configuración inicial que incluye las direcciones de 
-las interfaces y PCs. En este momento, ninguno de los routers tiene configurado routing estático o 
-routing dinámico.
+Los routers en la topología tienen una configuración inicial que incluye las direcciones 
+de las interfaces y PCs, además del Router ISP y el server con enrutamiento estatico en Router2. 
+En este momento,se configura routing dinámico EIGRP para IPv6 en R0,R1,R2,R3.
 
 ![alt text](https://github.com/brahianf/EIGRP/blob/master/tablaDireccionamiento.PNG)
 
 
 ### EIGRP-IPv4.pkt
 	
-https://github.com/brahianf/RIP_NG/blob/master/EIGRP-IPv4.pkt?raw=true
+https://github.com/brahianf/EIGRP/blob/master/EIGRP-IPv6.pkt?raw=true
