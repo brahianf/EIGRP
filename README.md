@@ -62,7 +62,127 @@ En este momento,se configura routing dinámico EIGRP para IPv6 en R0,R1,R2,R3.
 
 ![alt text](https://github.com/brahianf/EIGRP/blob/IPv6/tablaDireccionamiento.PNG)
 
+### Comandos CLI
 
-### EIGRP-IPv4.pkt
+	*** R0
 	
-https://github.com/brahianf/EIGRP/blob/master/EIGRP-IPv6.pkt?raw=true
+	```
+	R0>enable
+	R0#configure terminal
+	
+	R0(config)#ipv6 router eigrp 100
+	R0(config-rtr)#eigrp router-id 1.0.0.0
+	R0(config-rtr)#passive-interface fastEthernet 0/0
+	R0(config-rtr)#redistribute static 
+	R0(config-rtr)#no shutdown 
+	R0(config-rtr)#exit
+	
+	R0(config)#interface fastEthernet 0/0
+	R0(config-if)#ipv6 address fe80::00 link-local 
+	R0(config-if)#ipv6 eigrp 100
+	R0(config-if)#exit
+	
+	R0(config)#interface fastEthernet 0/1
+	R0(config-if)#ipv6 address fe80::00 link-local 
+	R0(config-if)#ipv6 eigrp 100
+	R0(config-if)#exit
+	
+	R0(config)#interface serial 0/0/0
+	R0(config-if)#ipv6 address fe80::00 link-local 
+	R0(config-if)#ipv6 eigrp 100
+	R0(config-if)#exit
+
+	R0(config)#interface serial 0/0/1
+	R0(config-if)#ipv6 address fe80::00 link-local 
+	R0(config-if)#ipv6 eigrp 100
+	R0(config-if)#exit
+	
+	
+	
+	```
+	
+	  ** R1 **
+	 
+	```
+	R1>enable 
+	R1(config)#ipv6 router eigrp 100
+	R1(config-rtr)#eigrp router-id 1.0.0.1
+	R1(config-rtr)#passive-interface fastEthernet 0/0
+	R1(config-rtr)#exit
+	
+	R0(config)#interface fastEthernet 0/0
+	R0(config-if)#ipv6 address fe80::01 link-local 
+	R0(config-if)#ipv6 eigrp 100
+	R0(config-if)#exit
+	
+	R0(config)#interface fastEthernet 0/1
+	R0(config-if)#ipv6 address fe80::01 link-local 
+	R0(config-if)#ipv6 eigrp 100
+	R0(config-if)#exit
+	
+	R0(config)#interface serial 0/0/0
+	R0(config-if)#ipv6 address fe80::01 link-local 
+	R0(config-if)#ipv6 eigrp 100
+	R0(config-if)#exit
+
+	
+	```
+		
+	  ** R2 **
+	
+	```
+	R2>enable 
+	R2(config)#ipv6 router eigrp 100
+	R2(config-rtr)#eigrp router-id 1.0.0.2
+	R2(config-rtr)#passive-interface fastEthernet 0/0
+	R2(config-rtr)#exit
+	
+	R2(config)#interface fastEthernet 0/0
+	R2(config-if)#ipv6 address fe80::02 link-local 
+	R2(config-if)#ipv6 eigrp 100
+	R2(config-if)#exit
+	
+	R2(config)#interface fastEthernet 0/1
+	R2(config-if)#ipv6 address fe80::02 link-local 
+	R2(config-if)#ipv6 eigrp 100
+	R2(config-if)#exit
+	
+	R2(config)#interface serial 0/0/0
+	R2(config-if)#ipv6 address fe80::02 link-local 
+	R2(config-if)#ipv6 eigrp 100
+	R2(config-if)#exit
+
+	
+	```
+		
+	  ** R3 **
+	 
+	```
+	R3>enable 
+	R3(config)#ipv6 router eigrp 100
+	R3(config-rtr)#eigrp router-id 1.0.0.3
+	R3(config-rtr)#passive-interface fastEthernet 0/0
+	R3(config-rtr)#exit
+	
+	R3(config)#interface fastEthernet 0/0
+	R3(config-if)#ipv6 address fe80::03 link-local 
+	R3(config-if)#ipv6 eigrp 100
+	R3(config-if)#exit
+	
+	R3(config)#interface fastEthernet 0/1
+	R3(config-if)#ipv6 address fe80::03link-local 
+	R3(config-if)#ipv6 eigrp 100
+	R3(config-if)#exit
+	
+	R3(config)#interface serial 0/0/0
+	R3(config-if)#ipv6 address fe80::03 link-local 
+	R3(config-if)#ipv6 eigrp 100
+	R3(config-if)#exit
+
+	
+	```
+	
+	
+### EIGRP-IPv4.pkt
+
+https://github.com/brahianf/EIGRP/blob/IPv6/EIGRP-IPv6.pkt?raw=true
